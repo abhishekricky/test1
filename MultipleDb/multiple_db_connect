@@ -1,0 +1,21 @@
+$row = Yii::app()->db->createCommand(array(
+    'select' => array('id', 'username'),
+    'from' => 'tbl_user',
+    'where' => 'id=:id',
+    'params' => array(':id'=>1),
+))->queryRow();
+
+$row = Yii::app()->db1->createCommand(array(
+    'select' => array('id', 'username'),
+    'from' => 'tbl_user',
+    'where' => 'id=:id',
+    'params' => array(':id'=>1),
+))->queryRow();
+
+$row = Yii::app()->db2->createCommand(array(
+    'select' => array('id', 'username'),
+    'from' => 'tbl_user',
+    'where' => 'id=:id',
+    'params' => array(':id'=>1),
+))->queryRow();
+
